@@ -2,26 +2,34 @@ import React from "react";
 
 const TableData = ({ rows }) => {
   return (
-    <div>
-      <table className="table table-info-subtle table-striped-columns m-5 p-5">
+    <div className="m-5">
+      <table className="table table-success table-striped-columns w-full">
         <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Email</th>
-            <th scope="col">Password</th>
+          <tr className="bg-gray-200">
+            <th className="border border-gray-400 px-4 py-2">#</th>
+            <th className="border border-gray-400 px-4 py-2">Email</th>
+            <th className="border border-gray-400 px-4 py-2">Password</th>
           </tr>
         </thead>
         <tbody>
           {rows.length === 0 ? (
             <tr>
-              <td colSpan="3" className="text-center">No data yet</td>
+              <td colSpan="3" className="text-center py-3">
+                No data yet
+              </td>
             </tr>
           ) : (
             rows.map((row, index) => (
               <tr key={index}>
-                <th scope="row">{index + 1}</th>
-                <td>{row.email}</td>
-                <td>{row.password}</td>
+                <td className="border border-gray-400 px-4 py-2">
+                  {index + 1}
+                </td>
+                <td className="border border-gray-400 px-4 py-2">
+                  {row.email}
+                </td>
+                <td className="border border-gray-400 px-4 py-2">
+                  {row.password}
+                </td>
               </tr>
             ))
           )}

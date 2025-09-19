@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React, { useState } from "react";
 
 const Forms = ({ onAdd }) => {
   const [email, setEmail] = useState("");
@@ -7,35 +7,58 @@ const Forms = ({ onAdd }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!email || !password) return; // simple validation
+    if (!email || !password) {
+      alert("Please fill in all fields");
+      return;
+    }
 
-    onAdd({ email, password }); // send to parent
-    setEmail(""); // clear inputs
+    // Send data up to App.jsx
+    onAdd({ email, password });
+
+    // Clear form
+    setEmail("");
     setPassword("");
   };
-    return (
-        <div>
-           <form onSubmit={handleSubmit}  className="m-5 p-5 bg-info-subtle rounded-2">
-  <div>
-    <div className="mb-3">
-      <label htmlfor="exampleInputEmail1" className="form-label fw-bold">Email address</label>
-      <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-    </div>
-    <div className="mb-3">
-      <label htmlfor="exampleInputPassword1" className="form-label fw-bold">Password</label>
-      <input type="password" className="form-control" id="exampleInputPassword1" onChange={(e) => setPassword(e.target.value)}/>
-    </div>
-    <div className="mb-3 form-check">
-      <input type="checkbox" className="form-check-input fw-bold" id="exampleCheck1" />
-      <label className="form-check-label" htmlfor="exampleCheck1 fw-bold">Check me out</label>
-    </div>
-    <button type="submit" className="btn btn-primary fw-bold">Submit</button>
-  </div>
-</form>
 
+  return (
+    <form
+      onSubmit={handleSubmit}
+      className="m-5 p-5 bg-info-subtle  rounded-lg shadow-md"
+    >
+      <div className="mb-3">
+        <label htmlFor="email" className="block fw-bold mb-1">
+          Email address
+        </label>
+        <input
+          type="email"
+          id="email"
+          className="form-control w-full border rounded px-3 py-2"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+      </div>
 
-        </div>
-    );
+      <div className="mb-3">
+        <label htmlFor="password" className="block fw-bold mb-1">
+          Password
+        </label>
+        <input
+          type="password"
+          id="password"
+          className="form-control w-full border rounded px-3 py-2"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+      </div>
+
+      <button
+        type="submit"
+        className="bg-primary text-white px-4 py-2 rounded hover:bg-blue-700 fw-bold"
+      >
+        Submit
+      </button>
+    </form>
+  );
 };
 
 export default Forms;
