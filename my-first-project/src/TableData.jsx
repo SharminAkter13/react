@@ -15,17 +15,17 @@ const TableData = () => {
                 <tr>
                 <th scope="row">1</th>
                 <td>Mark</td>
-                <td>@mdo</td>
+                <td>@mdogdg</td>
                 </tr>
                 <tr>
                 <th scope="row">2</th>
                 <td>Jacob</td>
-                <td>@fat</td>
+                <td>@fatjhbhus</td>
                 </tr>
                 <tr>
                 <th scope="row">3</th>
                 <td>John</td>
-                <td>@social</td>
+                <td>@socialff</td>
                 </tr>
             </tbody>
             </table>
