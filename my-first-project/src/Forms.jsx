@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FormData = () => {
+const Forms = () => {
     return (
         <div>
             <form>
@@ -25,4 +25,4 @@ const FormData = () => {
     );
 };
 
-export default FormData;
+export default Forms;
