@@ -7,6 +7,7 @@ const App = () => {
     <div>
       <h2>Please Fill-up the Form</h2>
       <Forms/>
+      <h2>Forms Data</h2>
       <TableData/>    
     </div>
   );
