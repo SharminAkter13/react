@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TableData from "./TableData";
 import Forms from "./Forms";
+import InternalCss from "./InternalCss";
 
 const App = () => {
   const [rows, setRows] = useState([]);
@@ -18,6 +19,7 @@ const App = () => {
       <h2 className="mt-4">Forms Data</h2>
       <TableData rows={rows} />
       </div>
+      <InternalCss/>
     </div>
   );
 };
