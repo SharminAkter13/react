@@ -53,7 +53,7 @@ const Forms = ({ onAdd }) => {
 
       <button
         type="submit"
-        className="bg-primary text-white px-4 py-2 rounded hover:bg-blue-700 fw-bold"
+        className="form-control bg-primary text-white px-4 py-2 rounded hover:bg-blue-700 fw-bold"
       >
         Submit
       </button>
