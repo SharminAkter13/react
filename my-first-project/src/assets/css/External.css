@@ -1,0 +1,9 @@
+.exter{
+    background-color: rgb(207, 225, 241);
+    font-weight: bold;
+    font-size: 16pt;
+    border: 2px solid yellow;
+    color: blueviolet;
+    animation: alternate-reverse;
+
+}

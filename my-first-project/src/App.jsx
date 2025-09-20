@@ -20,6 +20,7 @@ const App = () => {
       <TableData rows={rows} />
       </div>
       <InternalCss/>
+      
     </div>
   );
 };
