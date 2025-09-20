@@ -5,7 +5,9 @@ const HomePage = () => {
     return (
         <div>
             <Nav />
-            <h1>home page</h1>
+            <div>
+            <h1>Welcome To Home Page</h1>
+            </div>
         </div>
     );
 };
