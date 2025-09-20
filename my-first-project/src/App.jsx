@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import TableData from "./TableData";
 import Forms from "./Forms";
 import InternalCss from "./InternalCss";
+import ExternalCss from "./ExternalCss";
 
 const App = () => {
   const [rows, setRows] = useState([]);
@@ -20,7 +21,7 @@ const App = () => {
       <TableData rows={rows} />
       </div>
       <InternalCss/>
-      
+      <ExternalCss/>
     </div>
   );
 };
