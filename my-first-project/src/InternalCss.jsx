@@ -7,11 +7,13 @@ const InternalCss = () => {
     const int ={
         backgroundColor:'yellow',
         color:"red",
+        margin:"10px",
+        padding:"10px",
 
     }
     return (
         <div>
-            <h1 className='int' style={int}>LET'S LEARN REACT(-_-)</h1>
+            <h1 className='int' style={int}>LET'S LEARN REACT(*_*)</h1>
         </div>
     );
 };
