@@ -5,19 +5,28 @@ import HomePage from './pages/HomePage';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Services from './pages/Services';
+import Order from './pages/Order';
+import Checkout from './pages/Checkout';
+import Sidebar from './components/Sidebar';
 const App = () => {
   return (
     <div>
+      <div className='container-fluid'>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/services" element={<Services />} />
+            <Route path="/services" element={<Services />} >
+              <Route path="order" element={<Order />} />
+              <Route path="checkout" element={<Checkout />} />
+            </Route>
           </Routes>
         </BrowserRouter>
+      </div>
+      <div>
+        <Sidebar/>
+      </div>
     </div>
   );
 };
