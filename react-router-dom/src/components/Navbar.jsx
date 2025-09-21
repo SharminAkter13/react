@@ -27,7 +27,7 @@ const Navbar = () => {
                    
                     </li>
                     <li className="nav-item">
-                    <Link to={"/gallery"} className="nav-link " >Gallery</Link>
+                    <Link to={"/services"} className="nav-link " >Services</Link>
                     </li>
                 </ul>
                 <form className="d-flex" role="search">
