@@ -1,6 +1,6 @@
 import React from 'react';
 
-const dashbd = () => {
+const Dashbd = () => {
     return (
         <div>
             <h1>this is dashboard</h1>
@@ -8,4 +8,4 @@ const dashbd = () => {
     );
 };
 
-export default dashbd;
+export default Dashbd;
