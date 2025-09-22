@@ -12,30 +12,50 @@ import Checkout from './pages/Checkout';
 import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import Dashbd from './pages/dashbd';
+import Profiles from './pages/Profiles';
+import Settingss from './pages/Settingss';
 const App = () => {
   return (
     <div >
         <BrowserRouter>
-        <Navbar/>
-        <div className="row">
-          <div>
-            <Sidebar/>
+        <div>
+       
+        <Navbar />
+
+        <div className="container-fluid mt-5">
+          <div className="row">
+           
+            <div className="col-md-3">
+              <Sidebar />
+            </div>
+
+           
+            <div className="col-md-9">
+              <div className="p-4">
+             
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/services" element={<Services />} >
+                    <Route path="order" element={<Order />} />
+                    <Route path="checkout" element={<Checkout />} />
+                  </Route>
+                  <Route path="/dashboard" element={<Dashbd />} />
+                  <Route path="/profile" element={<Profiles />} />
+                  <Route path="/setting" element={<Settingss />} />
+                </Routes>
+              </div>
+            </div>
           </div>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/services" element={<Services />} >
-              <Route path="order" element={<Order />} />
-              <Route path="checkout" element={<Checkout />} />
-            </Route>
-          </Routes>
-          <div className="d-flex flex-grow-1">
-          <Sidebar/>
-          </div>
-          <Footer/>
-          </div>
+        </div>
+        </div>
         </BrowserRouter>
+        <div className='row'>
+           <Footer/>
+        </div>
+       
       </div>
   );
 };

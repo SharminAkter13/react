@@ -3,10 +3,10 @@ import { Link } from 'react-router';
 const Navbar = () => {
     return (
         <div>
-            <nav className="navbar navbar-expand-lg bg-info-subtle">
-            <div className="container-fluid">
+            <nav className="navbar navbar-expand-lg navbar-dark bg-primary-subtle fixed-top">           
+                <div className="container-fluid">
                 <Link to={"/"} className="navbar-brand fw-bold" >
-                    <img src="logo.png" alt="Bootstrap" width="40" height="35"/>
+                    <img src="/logo.png" alt="Bootstrap" width="40" height="35"/>
                     ORPHIC
                 </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
