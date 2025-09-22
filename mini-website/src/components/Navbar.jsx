@@ -6,7 +6,7 @@ const Navbar = () => {
             <nav className="navbar navbar-expand-lg navbar-dark bg-primary-subtle fixed-top">           
                 <div className="container-fluid">
                 <Link to={"/"} className="navbar-brand fw-bold" >
-                    <img src="/logo.png" alt="Bootstrap" width="40" height="35"/>
+                    <img src="/logo.png" alt="Bootstrap" width="50" height="38"/>
                     ORPHIC
                 </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,24 +15,24 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                    <Link to={"/"} className="nav-link active" >Home</Link>
+                    <Link to={"/"} className="nav-link active fw-bold" >Home</Link>
                     </li>
                     <li className="nav-item">
-                    <Link to={"/contact"} className="nav-link" >Contact</Link>
+                    <Link to={"/contact"} className="nav-link fw-bold" >Contact</Link>
                     </li>
                     <li className="nav-item ">
-                    <Link to={"/about"} className="nav-link " >
+                    <Link to={"/about"} className="nav-link fw-bold" >
                         About Us
                     </Link>
                    
                     </li>
                     <li className="nav-item">
-                    <Link to={"/services"} className="nav-link " >Services</Link>
+                    <Link to={"/services"} className="nav-link  fw-bold" >Services</Link>
                     </li>
                 </ul>
                 <form className="d-flex" role="search">
                     <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button className="btn btn-outline-success" type="submit">Search</button>
+                    <button className="btn btn-outline-success fw-bold" type="submit">Search</button>
                 </form>
                 </div>
             </div>
