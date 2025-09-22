@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Navbar = () => {
     return (
@@ -20,31 +21,31 @@ const Navbar = () => {
     <div className="navbar-menu" id="navbar-menu">
       <div className="navbar-end">
         <div className="navbar-item dropdown has-divider">
-          <a className="navbar-link">
+          <Link to="" className="navbar-link">
             <span className="icon"><i className="mdi mdi-menu" /></span>
             <span>Sample Menu</span>
             <span className="icon">
               <i className="mdi mdi-chevron-down" />
             </span>
-          </a>
+          </Link>
           <div className="navbar-dropdown">
-            <a href="profile.html" className="navbar-item">
+            <Link to="" href="profile.html" className="navbar-item">
               <span className="icon"><i className="mdi mdi-account" /></span>
               <span>My Profile</span>
-            </a>
-            <a className="navbar-item">
+            </Link>
+            <Link to="" className="navbar-item">
               <span className="icon"><i className="mdi mdi-settings" /></span>
               <span>Settings</span>
-            </a>
-            <a className="navbar-item">
+            </Link>
+            <Link to="" className="navbar-item">
               <span className="icon"><i className="mdi mdi-email" /></span>
               <span>Messages</span>
-            </a>
+            </Link>
             <hr className="navbar-divider" />
-            <a className="navbar-item">
+            <Link to="" className="navbar-item">
               <span className="icon"><i className="mdi mdi-logout" /></span>
               <span>Log Out</span>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="navbar-item dropdown has-divider has-user-avatar">
