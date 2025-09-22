@@ -11,12 +11,16 @@ import Order from './pages/Order';
 import Checkout from './pages/Checkout';
 import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 const App = () => {
   return (
     <div >
-      <div className='d-flex flex-column min-vh-100'>
         <BrowserRouter>
+        <Navbar/>
         <div className="row">
+          <div>
+            <Sidebar/>
+          </div>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<About />} />
@@ -33,7 +37,6 @@ const App = () => {
           </div>
         </BrowserRouter>
       </div>
-    </div>
   );
 };
 

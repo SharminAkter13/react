@@ -5,7 +5,7 @@ import { Link, Outlet } from 'react-router';
 const Services = () => {
     return (
         <div>
-            <Navbar/>
+            {/* <Navbar/> */}
             <div>
             <h1>This is Gallery Section</h1>
             </div>

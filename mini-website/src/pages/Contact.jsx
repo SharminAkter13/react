@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar';
 const Contact = () => {
     return (
         <div>
-            <Navbar />
+            {/* <Navbar /> */}
             <div>
                 <h1 className=" p-5 m-5 text-align-center">If Face Any Problem Please Contact Us</h1>
                 <form className="row g-3 p-3 m-5">

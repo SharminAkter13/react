@@ -5,7 +5,7 @@ const About = () => {
     return (
         
         <div>
-            <Navbar/>
+            {/* <Navbar/> */}
              <div className="about-us-container">
                 <h1>About Us</h1>
                 <p>
