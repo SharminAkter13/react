@@ -10,10 +10,11 @@ import Services from './pages/Services';
 import Order from './pages/Order';
 import Checkout from './pages/Checkout';
 import Sidebar from './components/Sidebar';
+import Footer from './components/Footer';
 const App = () => {
   return (
     <div >
-      <div >
+      <div className='d-flex flex-column min-vh-100'>
         <BrowserRouter>
         <div className="row">
           <Routes>
@@ -25,6 +26,10 @@ const App = () => {
               <Route path="checkout" element={<Checkout />} />
             </Route>
           </Routes>
+          <div className="d-flex flex-grow-1">
+          <Sidebar/>
+          </div>
+          <Footer/>
           </div>
         </BrowserRouter>
       </div>

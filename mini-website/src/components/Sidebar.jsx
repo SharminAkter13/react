@@ -8,13 +8,13 @@ const Sidebar = () => {
               <aside className="bg-light border-end vh-100 p-3">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <Link to="/" className="nav-link">Dashboard</Link>
+                    <Link to="/dashboard" className="nav-link">Dashboard</Link>
                   </li>
                   <li className="nav-item">
-                    <Link to="/about" className="nav-link">Profile</Link>
+                    <Link to="/profile" className="nav-link">Profile</Link>
                   </li>
                   <li className="nav-item">
-                    <Link to="/contact" className="nav-link">Settings</Link>
+                    <Link to="/setting" className="nav-link">Settings</Link>
                   </li>
                 </ul>
               </aside>       
