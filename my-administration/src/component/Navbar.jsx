@@ -6,7 +6,7 @@ const Navbar = () => {
            <div id="app">
   <nav id="navbar-main" className="navbar is-fixed-top">
     <div className="navbar-brand">
-      <Link to="" className="navbar-item mobile-aside-button">
+      <Link to="/" className="navbar-item mobile-aside-button">
         <span className="icon"><i className="mdi mdi-forwardburger mdi-24px" /></span>
       </Link>
       <div className="navbar-item">
@@ -29,20 +29,20 @@ const Navbar = () => {
             </span>
           </Link>
           <div className="navbar-dropdown">
-            <Link to="" href="profile.html" className="navbar-item">
+            <Link to="/profile" href="profile.html" className="navbar-item">
               <span className="icon"><i className="mdi mdi-account" /></span>
               <span>My Profile</span>
             </Link>
-            <Link to="" className="navbar-item">
+            <Link to="/setting" className="navbar-item">
               <span className="icon"><i className="mdi mdi-settings" /></span>
               <span>Settings</span>
             </Link>
-            <Link to="" className="navbar-item">
+            <Link to="/messages" className="navbar-item">
               <span className="icon"><i className="mdi mdi-email" /></span>
               <span>Messages</span>
             </Link>
             <hr className="navbar-divider" />
-            <Link to="" className="navbar-item">
+            <Link to="/logout" className="navbar-item">
               <span className="icon"><i className="mdi mdi-logout" /></span>
               <span>Log Out</span>
             </Link>
