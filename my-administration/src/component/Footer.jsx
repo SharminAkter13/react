@@ -8,7 +8,7 @@ const Footer = () => {
             <b>Version</b> 3.2.0
           </div>
           <strong>
-            Copyright © 2025 <a href="https://adminlte.io">Sharmin Akter</a>.
+            Copyright © 2025 <a href="https://adminlte.io">Talentstream</a>.
           </strong>{" "}
           All rights reserved.
         </footer>
