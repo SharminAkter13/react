@@ -1,98 +1,210 @@
 import React from 'react';
-import { Link } from 'react-router';
 
 const Navbar = () => {
     return (
-           <div id="app">
-  <nav id="navbar-main" className="navbar is-fixed-top">
-    <div className="navbar-brand">
-      <Link to="/" className="navbar-item mobile-aside-button">
-        <span className="icon"><i className="mdi mdi-forwardburger mdi-24px" /></span>
-      </Link>
-      <div className="navbar-item">
-        <div className="control"><input placeholder="Search everywhere..." className="input" /></div>
-      </div>
-    </div>
-    <div className="navbar-brand is-right">
-      <Link to="" className="navbar-item --jb-navbar-menu-toggle" data-target="navbar-menu">
-        <span className="icon"><i className="mdi mdi-dots-vertical mdi-24px" /></span>
-      </Link>
-    </div>
-    <div className="navbar-menu" id="navbar-menu">
-      <div className="navbar-end">
-        <div className="navbar-item dropdown has-divider">
-          <Link to="" className="navbar-link">
-            <span className="icon"><i className="mdi mdi-menu" /></span>
-            <span>Sample Menu</span>
-            <span className="icon">
-              <i className="mdi mdi-chevron-down" />
-            </span>
-          </Link>
-          <div className="navbar-dropdown">
-            <Link to="/profile" href="profile.html" className="navbar-item">
-              <span className="icon"><i className="mdi mdi-account" /></span>
-              <span>My Profile</span>
-            </Link>
-            <Link to="/setting" className="navbar-item">
-              <span className="icon"><i className="mdi mdi-settings" /></span>
-              <span>Settings</span>
-            </Link>
-            <Link to="/messages" className="navbar-item">
-              <span className="icon"><i className="mdi mdi-email" /></span>
-              <span>Messages</span>
-            </Link>
-            <hr className="navbar-divider" />
-            <Link to="/logout" className="navbar-item">
-              <span className="icon"><i className="mdi mdi-logout" /></span>
-              <span>Log Out</span>
-            </Link>
-          </div>
-        </div>
-        <div className="navbar-item dropdown has-divider has-user-avatar">
-          <Link to="" className="navbar-link">
-            <div className="user-avatar">
-              <img src="https://avatars.dicebear.com/v2/initials/john-doe.svg" alt="John Doe" className="rounded-full" />
-            </div>
-            <div className="is-user-name"><span>John Doe</span></div>
-            <span className="icon"><i className="mdi mdi-chevron-down" /></span>
-          </Link>
-          <div className="navbar-dropdown">
-            <Link to="" href="profile.html" className="navbar-item">
-              <span className="icon"><i className="mdi mdi-account" /></span>
-              <span>My Profile</span>
-            </Link>
-            <Link to="" className="navbar-item">
-              <span className="icon"><i className="mdi mdi-settings" /></span>
-              <span>Settings</span>
-            </Link>
-            <Link to="" className="navbar-item">
-              <span className="icon"><i className="mdi mdi-email" /></span>
-              <span>Messages</span>
-            </Link>
-            <hr className="navbar-divider" />
-            <Link to="" className="navbar-item">
-              <span className="icon"><i className="mdi mdi-logout" /></span>
-              <span>Log Out</span>
-            </Link>
-          </div>
-        </div>
-        <Link to="" href="https://justboil.me/tailwind-admin-templates" className="navbar-item has-divider desktop-icon-only">
-          <span className="icon"><i className="mdi mdi-help-circle-outline" /></span>
-          <span>About</span>
-        </Link>
-        <Link to="" href="https://github.com/justboil/admin-one-tailwind" className="navbar-item has-divider desktop-icon-only">
-          <span className="icon"><i className="mdi mdi-github-circle" /></span>
-          <span>GitHub</span>
-        </Link>
-        <Link to="" title="Log out" className="navbar-item desktop-icon-only">
-          <span className="icon"><i className="mdi mdi-logout" /></span>
-          <span>Log out</span>
-        </Link>
-      </div>
-    </div>
-  </nav>
-</div>
-
+        <div>
+ <nav className="main-header navbar navbar-expand navbar-white navbar-light">
+          {/* Left navbar links */}
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <a
+                className="nav-link"
+                data-widget="pushmenu"
+                href="#"
+                role="button"
+              >
+                <i className="fas fa-bars" />
+              </a>
+            </li>
+            <li className="nav-item d-none d-sm-inline-block">
+              <a href="../../index3.html" className="nav-link">
+                Home
+              </a>
+            </li>
+            <li className="nav-item d-none d-sm-inline-block">
+              <a href="#" className="nav-link">
+                Contact
+              </a>
+            </li>
+          </ul>
+          {/* Right navbar links */}
+          <ul className="navbar-nav ml-auto">
+            {/* Navbar Search */}
+            <li className="nav-item">
+              <a
+                className="nav-link"
+                data-widget="navbar-search"
+                href="#"
+                role="button"
+              >
+                <i className="fas fa-search" />
+              </a>
+              <div className="navbar-search-block">
+                <form className="form-inline">
+                  <div className="input-group input-group-sm">
+                    <input
+                      className="form-control form-control-navbar"
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                    />
+                    <div className="input-group-append">
+                      <button className="btn btn-navbar" type="submit">
+                        <i className="fas fa-search" />
+                      </button>
+                      <button
+                        className="btn btn-navbar"
+                        type="button"
+                        data-widget="navbar-search"
+                      >
+                        <i className="fas fa-times" />
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </li>
+            {/* Messages Dropdown Menu */}
+            <li className="nav-item dropdown">
+              <a className="nav-link" data-toggle="dropdown" href="#">
+                <i className="far fa-comments" />
+                <span className="badge badge-danger navbar-badge">3</span>
+              </a>
+              <div className="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                <a href="#" className="dropdown-item">
+                  {/* Message Start */}
+                  <div className="media">
+                    <img
+                      src="assets-admin/dist/img/user1-128x128.jpg"
+                      alt="User Avatar"
+                      className="img-size-50 mr-3 img-circle"
+                    />
+                    <div className="media-body">
+                      <h3 className="dropdown-item-title">
+                        Brad Diesel
+                        <span className="float-right text-sm text-danger">
+                          <i className="fas fa-star" />
+                        </span>
+                      </h3>
+                      <p className="text-sm">Call me whenever you can...</p>
+                      <p className="text-sm text-muted">
+                        <i className="far fa-clock mr-1" /> 4 Hours Ago
+                      </p>
+                    </div>
+                  </div>
+                  {/* Message End */}
+                </a>
+                <div className="dropdown-divider" />
+                <a href="#" className="dropdown-item">
+                  {/* Message Start */}
+                  <div className="media">
+                    <img
+                      src="../../dist/img/user8-128x128.jpg"
+                      alt="User Avatar"
+                      className="img-size-50 img-circle mr-3"
+                    />
+                    <div className="media-body">
+                      <h3 className="dropdown-item-title">
+                        John Pierce
+                        <span className="float-right text-sm text-muted">
+                          <i className="fas fa-star" />
+                        </span>
+                      </h3>
+                      <p className="text-sm">I got your message bro</p>
+                      <p className="text-sm text-muted">
+                        <i className="far fa-clock mr-1" /> 4 Hours Ago
+                      </p>
+                    </div>
+                  </div>
+                  {/* Message End */}
+                </a>
+                <div className="dropdown-divider" />
+                <a href="#" className="dropdown-item">
+                  {/* Message Start */}
+                  <div className="media">
+                    <img
+                      src="../../dist/img/user3-128x128.jpg"
+                      alt="User Avatar"
+                      className="img-size-50 img-circle mr-3"
+                    />
+                    <div className="media-body">
+                      <h3 className="dropdown-item-title">
+                        Nora Silvester
+                        <span className="float-right text-sm text-warning">
+                          <i className="fas fa-star" />
+                        </span>
+                      </h3>
+                      <p className="text-sm">The subject goes here</p>
+                      <p className="text-sm text-muted">
+                        <i className="far fa-clock mr-1" /> 4 Hours Ago
+                      </p>
+                    </div>
+                  </div>
+                  {/* Message End */}
+                </a>
+                <div className="dropdown-divider" />
+                <a href="#" className="dropdown-item dropdown-footer">
+                  See All Messages
+                </a>
+              </div>
+            </li>
+            {/* Notifications Dropdown Menu */}
+            <li className="nav-item dropdown">
+              <a className="nav-link" data-toggle="dropdown" href="#">
+                <i className="far fa-bell" />
+                <span className="badge badge-warning navbar-badge">15</span>
+              </a>
+              <div className="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                <span className="dropdown-item dropdown-header">
+                  15 Notifications
+                </span>
+                <div className="dropdown-divider" />
+                <a href="#" className="dropdown-item">
+                  <i className="fas fa-envelope mr-2" /> 4 new messages
+                  <span className="float-right text-muted text-sm">3 mins</span>
+                </a>
+                <div className="dropdown-divider" />
+                <a href="#" className="dropdown-item">
+                  <i className="fas fa-users mr-2" /> 8 friend requests
+                  <span className="float-right text-muted text-sm">
+                    12 hours
+                  </span>
+                </a>
+                <div className="dropdown-divider" />
+                <a href="#" className="dropdown-item">
+                  <i className="fas fa-file mr-2" /> 3 new reports
+                  <span className="float-right text-muted text-sm">2 days</span>
+                </a>
+                <div className="dropdown-divider" />
+                <a href="#" className="dropdown-item dropdown-footer">
+                  See All Notifications
+                </a>
+              </div>
+            </li>
+            <li className="nav-item">
+              <a
+                className="nav-link"
+                data-widget="fullscreen"
+                href="#"
+                role="button"
+              >
+                <i className="fas fa-expand-arrows-alt" />
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                className="nav-link"
+                data-widget="control-sidebar"
+                data-slide="true"
+                href="#"
+                role="button"
+              >
+                <i className="fas fa-th-large" />
+              </a>
+            </li>
+          </ul>
+        </nav>
+                </div>
     );
 };
 
