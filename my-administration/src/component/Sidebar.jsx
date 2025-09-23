@@ -1,94 +1,159 @@
 import React from 'react';
-
+import { Link } from "react-router-dom";
 const Sidebar = () => {
     return (
         <div>
-          <aside className="aside is-placed-left is-expanded">
-  <div className="aside-tools">
-    <div>
-      Admin <b className="font-black">One</b>
-    </div>
-  </div>
-  <div className="menu is-menu-main">
-    <p className="menu-label">General</p>
-    <ul className="menu-list">
-      <li className="active">
-        <a href="index.html">
-          <span className="icon"><i className="mdi mdi-desktop-mac" /></span>
-          <span className="menu-item-label">Dashboard</span>
-        </a>
-      </li>
-    </ul>
-    <p className="menu-label">Examples</p>
-    <ul className="menu-list">
-      <li className="--set-active-tables-html">
-        <a href="tables.html">
-          <span className="icon"><i className="mdi mdi-table" /></span>
-          <span className="menu-item-label">Tables</span>
-        </a>
-      </li>
-      <li className="--set-active-forms-html">
-        <a href="forms.html">
-          <span className="icon"><i className="mdi mdi-square-edit-outline" /></span>
-          <span className="menu-item-label">Forms</span>
-        </a>
-      </li>
-      <li className="--set-active-profile-html">
-        <a href="profile.html">
-          <span className="icon"><i className="mdi mdi-account-circle" /></span>
-          <span className="menu-item-label">Profile</span>
-        </a>
-      </li>
-      <li>
-        <a href="login.html">
-          <span className="icon"><i className="mdi mdi-lock" /></span>
-          <span className="menu-item-label">Login</span>
-        </a>
-      </li>
-      <li>
-        <a className="dropdown">
-          <span className="icon"><i className="mdi mdi-view-list" /></span>
-          <span className="menu-item-label">Submenus</span>
-          <span className="icon"><i className="mdi mdi-plus" /></span>
-        </a>
-        <ul>
-          <li>
-            <a href="#void">
-              <span>Sub-item One</span>
-            </a>
-          </li>
-          <li>
-            <a href="#void">
-              <span>Sub-item Two</span>
-            </a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-    <p className="menu-label">About</p>
-    <ul className="menu-list">
-      <li>
-        <a href="https://justboil.me" onclick="alert('Coming soon'); return false" target="_blank" className="has-icon">
-          <span className="icon"><i className="mdi mdi-credit-card-outline" /></span>
-          <span className="menu-item-label">Premium Demo</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://justboil.me/tailwind-admin-templates" className="has-icon">
-          <span className="icon"><i className="mdi mdi-help-circle" /></span>
-          <span className="menu-item-label">About</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/justboil/admin-one-tailwind" className="has-icon">
-          <span className="icon"><i className="mdi mdi-github-circle" /></span>
-          <span className="menu-item-label">GitHub</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-</aside>
+            <aside className="main-sidebar sidebar-dark-primary elevation-4">
+          {/* Brand Logo */}
+          <a href="../../index3.html" className="brand-link">
+            <img
+              src="assets-admin/dist/img/AdminLTELogo.png"
+              alt="AdminLTE Logo"
+              className="brand-image img-circle elevation-3"
+              style={{ opacity: ".8" }}
+            />
+            <span className="brand-text font-weight-light">AdminLTE 3</span>
+          </a>
+          {/* Sidebar */}
+          <div className="sidebar">
+            {/* Sidebar user (optional) */}
+            <div className="user-panel mt-3 pb-3 mb-3 d-flex">
+              <div className="image">
+                <img
+                  src="assets-admin/dist/img/user2-160x160.jpg"
+                  className="img-circle elevation-2"
+                  alt="User Image"
+                />
+              </div>
+              <div className="info">
+                <a href="#" className="d-block">
+                  Talentstream
+                </a>
+              </div>
+            </div>
+            {/* SidebarSearch Form */}
+            <div className="form-inline">
+              <div className="input-group" data-widget="sidebar-search">
+                <input
+                  className="form-control form-control-sidebar"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <div className="input-group-append">
+                  <button className="btn btn-sidebar">
+                    <i className="fas fa-search fa-fw" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            {/* Sidebar Menu */}
+            <nav className="mt-2">
+              <ul
+                className="nav nav-pills nav-sidebar flex-column"
+                data-widget="treeview"
+                role="menu"
+                data-accordion="false"
+              >
+                {/* Add icons to the links using the .nav-icon class
+         with font-awesome or any other icon font library */}
+                <li className="nav-item">
+                  <a href="#" className="nav-link">
+                    <i className="nav-icon fas fa-tachometer-alt" />
+                    <p>
+                      Dashboard
+                      <i className="right fas fa-angle-left" />
+                    </p>
+                  </a>
+                
+                </li>
+                <li className="nav-item">
+                  <a href="#" className="nav-link">
+                    <i className="nav-icon fas fa-edit" />
+                    <p>
+                      Forms
+                      <i className="fas fa-angle-left right" />
+                    </p>
+                  </a>
+                  <ul className="nav nav-treeview">
+                    <li className="nav-item">
+                      <a href="../forms/general.html" className="nav-link">
+                        <i className="far fa-circle nav-icon" />
+                        <p>General Elements</p>
+                      </a>
+                    </li>
+                   
+                    <li className="nav-item">
+                      <a href="../forms/validation.html" className="nav-link">
+                        <i className="far fa-circle nav-icon" />
+                        <p>Validation</p>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+               
+                <li className="nav-header">EXAMPLES</li>
 
+                <li className="nav-item">
+                  <a href="#" className="nav-link">
+                    <i className="nav-icon fas fa-book" />
+                    <p>
+                      User
+                      <i className="fas fa-angle-left right" />
+                    </p>
+                  </a>
+                  <ul className="nav nav-treeview">
+                    <li className="nav-item">
+                      <Link to="/add-user" className="nav-link">
+                        <i className="far fa-circle nav-icon" />
+                        <p>Add User</p>
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link to="/manage-user" className="nav-link">
+                        <i className="far fa-circle nav-icon" />
+                        <p>Manage User</p>
+                      </Link>
+                    </li>
+                  
+                  </ul>
+                </li>
+                 <li className="nav-item">
+                  <a href="#" className="nav-link">
+                    <i className="nav-icon fas fa-book" />
+                    <p>
+                      Category
+                      <i className="fas fa-angle-left right" />
+                    </p>
+                  </a>
+                  <ul className="nav nav-treeview">
+                    <li className="nav-item">
+                      <Link to="/add-cat" className="nav-link">
+                        <i className="far fa-circle nav-icon" />
+                        <p>Add Category</p>
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link to="/manage-cat" className="nav-link">
+                        <i className="far fa-circle nav-icon" />
+                        <p>Manage Category</p>
+                      </Link>
+                    </li>
+                  
+                  </ul>
+                </li>
+                
+                <li className="nav-header">MISCELLANEOUS</li>
+               
+                <li className="nav-header">MULTI LEVEL EXAMPLE</li>
+               
+               
+              </ul>
+            </nav>
+            {/* /.sidebar-menu */}
+          </div>
+          {/* /.sidebar */}
+        </aside>
         </div>
     );
 };
