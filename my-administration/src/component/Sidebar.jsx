@@ -7,12 +7,12 @@ const Sidebar = () => {
           {/* Brand Logo */}
           <a href="../../index3.html" className="brand-link">
             <img
-              src="assets-admin/dist/img/AdminLTELogo.png"
+              src="admin/dist/img/AdminLTELogo.png"
               alt="AdminLTE Logo"
               className="brand-image img-circle elevation-3"
               style={{ opacity: ".8" }}
             />
-            <span className="brand-text font-weight-light">AdminLTE 3</span>
+            <span className="brand-text font-weight-light">Talentstream</span>
           </a>
           {/* Sidebar */}
           <div className="sidebar">
@@ -20,7 +20,7 @@ const Sidebar = () => {
             <div className="user-panel mt-3 pb-3 mb-3 d-flex">
               <div className="image">
                 <img
-                  src="assets-admin/dist/img/user2-160x160.jpg"
+                  src="admin/dist/img/user2-160x160.jpg"
                   className="img-circle elevation-2"
                   alt="User Image"
                 />
@@ -31,22 +31,7 @@ const Sidebar = () => {
                 </a>
               </div>
             </div>
-            {/* SidebarSearch Form */}
-            <div className="form-inline">
-              <div className="input-group" data-widget="sidebar-search">
-                <input
-                  className="form-control form-control-sidebar"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <div className="input-group-append">
-                  <button className="btn btn-sidebar">
-                    <i className="fas fa-search fa-fw" />
-                  </button>
-                </div>
-              </div>
-            </div>
+            
             {/* Sidebar Menu */}
             <nav className="mt-2">
               <ul
@@ -67,36 +52,14 @@ const Sidebar = () => {
                   </a>
                 
                 </li>
-                <li className="nav-item">
-                  <a href="#" className="nav-link">
-                    <i className="nav-icon fas fa-edit" />
-                    <p>
-                      Forms
-                      <i className="fas fa-angle-left right" />
-                    </p>
-                  </a>
-                  <ul className="nav nav-treeview">
-                    <li className="nav-item">
-                      <a href="../forms/general.html" className="nav-link">
-                        <i className="far fa-circle nav-icon" />
-                        <p>General Elements</p>
-                      </a>
-                    </li>
-                   
-                    <li className="nav-item">
-                      <a href="../forms/validation.html" className="nav-link">
-                        <i className="far fa-circle nav-icon" />
-                        <p>Validation</p>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
+                
                
-                <li className="nav-header">EXAMPLES</li>
+                
 
                 <li className="nav-item">
                   <a href="#" className="nav-link">
-                    <i className="nav-icon fas fa-book" />
+                    <i className="nav-icon fas fa-user" />
+
                     <p>
                       User
                       <i className="fas fa-angle-left right" />
@@ -105,13 +68,14 @@ const Sidebar = () => {
                   <ul className="nav nav-treeview">
                     <li className="nav-item">
                       <Link to="/add-user" className="nav-link">
-                        <i className="far fa-circle nav-icon" />
+                        <i className="nav-icon fas fa-user" />
+
                         <p>Add User</p>
                       </Link>
                     </li>
                     <li className="nav-item">
                       <Link to="/manage-user" className="nav-link">
-                        <i className="far fa-circle nav-icon" />
+                       <i className="nav-icon fas fa-user-cog" />
                         <p>Manage User</p>
                       </Link>
                     </li>
@@ -120,7 +84,7 @@ const Sidebar = () => {
                 </li>
                  <li className="nav-item">
                   <a href="#" className="nav-link">
-                    <i className="nav-icon fas fa-book" />
+                   <i className="nav-icon fas fa-list" />
                     <p>
                       Category
                       <i className="fas fa-angle-left right" />
@@ -129,13 +93,13 @@ const Sidebar = () => {
                   <ul className="nav nav-treeview">
                     <li className="nav-item">
                       <Link to="/add-cat" className="nav-link">
-                        <i className="far fa-circle nav-icon" />
+                        <i className="nav-icon fas fa-tag" />
                         <p>Add Category</p>
                       </Link>
                     </li>
                     <li className="nav-item">
                       <Link to="/manage-cat" className="nav-link">
-                        <i className="far fa-circle nav-icon" />
+                        <i className="nav-icon fas fa-folder-plus" />
                         <p>Manage Category</p>
                       </Link>
                     </li>
@@ -154,7 +118,7 @@ const Sidebar = () => {
           </div>
           {/* /.sidebar */}
         </aside>
-        </div>
+       </div>
     );
 };
 
