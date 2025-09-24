@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Sidebar = () => {
     return (
         <div>
-            <aside className="main-sidebar sidebar-dark-primary elevation-4">
+            <aside className="main-sidebar sidebar-primary elevation-4">
           {/* Brand Logo */}
           <a href="../../index3.html" className="brand-link">
             <img
@@ -12,7 +12,7 @@ const Sidebar = () => {
               className="brand-image img-circle elevation-3"
               style={{ opacity: ".8" }}
             />
-            <span className="brand-text font-weight-light">Talentstream</span>
+            <span className="brand-text font-weight-bold">Talentstream</span>
           </a>
           {/* Sidebar */}
           <div className="sidebar">
@@ -26,7 +26,7 @@ const Sidebar = () => {
                 />
               </div>
               <div className="info">
-                <a href="#" className="d-block">
+                <a href="#" className="d-block font-weight-bold">
                   Talentstream
                 </a>
               </div>
@@ -44,7 +44,7 @@ const Sidebar = () => {
          with font-awesome or any other icon font library */}
                 <li className="nav-item">
                   <a href="#" className="nav-link">
-                    <i className="nav-icon fas fa-tachometer-alt" />
+                  <i className="nav-icon fas fa-th-large" />
                     <p>
                       Dashboard
                       <i className="right fas fa-angle-left" />
@@ -70,7 +70,7 @@ const Sidebar = () => {
                       <Link to="/add-user" className="nav-link">
                         <i className="nav-icon fas fa-user" />
 
-                        <p>Add User</p>
+                        <p>Create User</p>
                       </Link>
                     </li>
                     <li className="nav-item">
@@ -94,7 +94,7 @@ const Sidebar = () => {
                     <li className="nav-item">
                       <Link to="/add-cat" className="nav-link">
                         <i className="nav-icon fas fa-tag" />
-                        <p>Add Category</p>
+                        <p>Create Category</p>
                       </Link>
                     </li>
                     <li className="nav-item">
@@ -103,15 +103,38 @@ const Sidebar = () => {
                         <p>Manage Category</p>
                       </Link>
                     </li>
+
+
                   
                   </ul>
                 </li>
-                
-                <li className="nav-header">MISCELLANEOUS</li>
-               
-                <li className="nav-header">MULTI LEVEL EXAMPLE</li>
-               
-               
+                  <li className="nav-item">
+                  <a href="#" className="nav-link">
+                   <i className="nav-icon fas fa-list" />
+                    <p>
+                      Profile
+                      <i className="fas fa-angle-left right" />
+                    </p>
+                  </a>
+                  <ul className="nav nav-treeview">
+                    <li className="nav-item">
+                      <Link to="/view-profile" className="nav-link">
+                        <i className="nav-icon fas fa-tag" />
+                        <p>View Profile</p>
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link to="/edit-profile" className="nav-link">
+                        <i className="nav-icon fas fa-folder-plus" />
+                        <p>Edit Profile</p>
+                      </Link>
+                    </li>
+
+
+                  
+                  </ul>
+                </li>
+              
               </ul>
             </nav>
             {/* /.sidebar-menu */}
