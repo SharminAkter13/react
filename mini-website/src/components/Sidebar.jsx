@@ -16,6 +16,9 @@ const Sidebar = () => {
                   <li className="nav-item">
                     <Link to="/setting" className="nav-link text-light fw-bold">Settings</Link>
                   </li>
+                  <li className="nav-item">
+                    {/* <Link to="/check" className="nav-link text-light fw-bold">Checkout</Link> */}
+                  </li>
                 </ul>
               </aside>       
         </div>

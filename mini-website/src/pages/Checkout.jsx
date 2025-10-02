@@ -13,12 +13,12 @@ function Checkout() {
       <button
         type="button"
         onClick={() => setColor("blue")}
-      >Blue</button>
+      style={{margin:"5px"}}>Blue</button>
        
        <button
         type='button'
-        onClick={() => setchkout("Checkout details")} >
-        
+        onClick={() => setchkout("Checkout details")}  style={{margin:"5px"}}>
+        Checkout
        </button>
     </>
   )
