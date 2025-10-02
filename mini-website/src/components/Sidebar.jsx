@@ -8,7 +8,7 @@ const Sidebar = () => {
               <aside className="bg-dark  text-light border-end vh-100 p-3 position-fixed" style={{ top: '60px', left: 0, width: '250px', height: '100%' }}>
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <Link to="/dashboard" className="nav-link text-light fw-bold">Dashboard</Link>
+                    <Link to="/cd" className="nav-link text-light fw-bold">Dashboard</Link>
                   </li>
                   <li className="nav-item">
                     <Link to="/profile" className="nav-link text-light fw-bold">Profile</Link>
