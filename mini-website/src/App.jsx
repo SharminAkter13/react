@@ -15,6 +15,8 @@ import Navbar from './components/Navbar';
 import Dashbd from './pages/dashbd';
 import Profiles from './pages/Profiles';
 import Settingss from './pages/Settingss';
+import Product from './pages/Product';
+import UseEffect from './pages/UseEffect';
 const App = () => {
   return (
     <div >
@@ -45,6 +47,8 @@ const App = () => {
                   <Route path="/dashboard" element={<Dashbd />} />
                   <Route path="/profile" element={<Profiles />} />
                   <Route path="/setting" element={<Settingss />} />
+                  <Route path="/product" element={<Product />} />
+                  <Route path="/useeffect" element={<UseEffect />} />
                 </Routes>
               </div>
             </div>

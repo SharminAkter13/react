@@ -17,7 +17,10 @@ const Sidebar = () => {
                     <Link to="/setting" className="nav-link text-light fw-bold">Settings</Link>
                   </li>
                   <li className="nav-item">
-                    {/* <Link to="/check" className="nav-link text-light fw-bold">Checkout</Link> */}
+                    <Link to="/product" className="nav-link text-light fw-bold">Product</Link>
+                  </li> 
+                  <li className="nav-item">
+                    <Link to="/useeffect" className="nav-link text-light fw-bold">Use Effect</Link>
                   </li>
                 </ul>
               </aside>       
