@@ -9,11 +9,25 @@ import React from 'react';
 
       // ... rest of your component logic
     };
-      return (
-        <div>
-          <p>Count: {count}</p>
-          <button onClick={increment}>Increment</button>
-        </div>
+    const addItemToOrder = (item) => {
+  setOrderItems((prevItems) => {
+    const existingItem = prevItems.find((i) => i.id === item.id);
+    if (existingItem) {
+      return prevItems.map((i) =>
+        i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
       );
     }
+    return [...prevItems, { ...item, quantity: 1 }];
+    
+    const handleCustomerInfoChange = (e) => {
+  const { name, value } = e.target;
+  setCustomerInfo((prevInfo) => ({
+    ...prevInfo,
+    [name]: value,
+  }));
+};
+
+  });
+};
+     
 export default Order;
