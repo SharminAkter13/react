@@ -1,12 +1,14 @@
 import React from 'react';
     import { useState } from 'react';
         function Order() {
-      const [count, setCount] = useState(0);
+    const OrderPage = () => {
+      const [orderItems, setOrderItems] = useState([]);
+      const [totalPrice, setTotalPrice] = useState(0);
+      const [customerInfo, setCustomerInfo] = useState({ name: '', address: '', email: '' });
+      const [isSubmitting, setIsSubmitting] = useState(false);
 
-      const increment = () => {
-        setCount(count + 1); // Updates 'count' and triggers a re-render
-      };
-
+      // ... rest of your component logic
+    };
       return (
         <div>
           <p>Count: {count}</p>
