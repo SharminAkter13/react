@@ -1,9 +1,10 @@
-import { useState, createContext, useContext } from 'react';
+import React, { useState, createContext, useContext } from 'react';
 import { createRoot } from 'react-dom/client';
 
+// Create the context
 const UserContext = createContext();
 
-function useContext() {
+function UseContextp() {
   const [user, setUser] = useState("Linus");
 
   return (
@@ -17,24 +18,25 @@ function useContext() {
 function Component2() {
   return (
     <>
-      <h1>Component 2</h1>
+      <h2>Component 2</h2>
       <Component3 />
     </>
   );
 }
 
 function Component3() {
+  // Access context value here
   const user = useContext(UserContext);
 
   return (
     <>
-      <h1>Component 3</h1>
-      <h2>{`Hello ${user} again!`}</h2>
+      <h3>Component 3</h3>
+      <h4>{`Hello ${user} again!`}</h4>
     </>
   );
 }
 
-createRoot(document.getElementById('root')).render(
-  <useContext />
-);
-export default useContext;
+// Render it
+createRoot(document.getElementById('root')).render(<UseContextp />);
+
+export default UseContextp;
